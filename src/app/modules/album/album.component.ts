@@ -96,11 +96,15 @@ export class AlbumComponent {
 
   getThumbnails() {
     const mod = this.currentPhotoIndex % 4;
+    const indexMinusMod = this.currentPhotoIndex - mod;
+    const albumLength = this.album?.photos?.length || 0;
+    const initialIndex =
+      this.currentPhotoIndex + 5 < albumLength
+        ? indexMinusMod
+        : albumLength - 5;
+    const finalIndex = initialIndex + 5;
 
-    return this.album.photos?.slice(
-      this.currentPhotoIndex - mod,
-      this.currentPhotoIndex - mod + 5
-    );
+    return this.album.photos?.slice(initialIndex, finalIndex);
   }
 
   getDialogData() {
