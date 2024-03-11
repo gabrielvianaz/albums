@@ -30,3 +30,12 @@ Para o serviço de autenticação foi utilizado o serviço DummyJSON, o qual dis
 "username": "atuny0",
 "password": "9uQFF1Lh"
 ```
+
+## 🔨 Funcionalidades
+
+- Autenticação
+- Listagem de todos os álbums
+- Visualização das 10 primeiras imagens de um álbum
+- Navegação entre as imagens do álbum ao clicar em alguma imagem
+
+Para implementar a funcionalidade de navegação entre as imagens, não utilizei nenhuma biblioteca externa além da Material Angular.
