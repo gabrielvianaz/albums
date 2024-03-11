@@ -1,6 +1,26 @@
 .albums {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   padding: 50px;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1200px) {
+  .albums {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .albums {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .albums {
+    grid-template-columns: 1fr;
+  }
 }

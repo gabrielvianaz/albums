@@ -11,10 +11,6 @@
   gap: 10px;
 }
 
-.album-dialog img {
-  max-width: 100%;
-}
-
 .album-dialog p {
   font-size: 2rem;
   font-weight: lighter;
@@ -29,6 +25,8 @@
   display: flex;
   gap: 10px;
   margin-top: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .thumbs img {
@@ -39,4 +37,22 @@
 .thumbs img.current {
   border: 3px solid rgba(0, 0, 0, 0.5);
   cursor: default;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1200px) {
+  .album-dialog-wrapper {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .album-dialog img {
+    max-width: 75%;
+  }
+
+  .thumbs {
+    display: none;
+  }
 }
