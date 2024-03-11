@@ -48,7 +48,9 @@ export class AlbumsComponent {
       state: {
         album: {
           ...this.albums.find((album) => album.id === albumId),
-          photos: this.photos.filter((photo) => photo.albumId === albumId),
+          photos: this.photos
+            .filter((photo) => photo.albumId === albumId)
+            .splice(0, 10),
         },
       },
     });
