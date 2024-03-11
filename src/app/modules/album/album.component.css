@@ -1,0 +1,31 @@
+.album {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.header h2 {
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+img {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+}
+
+a:hover {
+  color: gray;
+}

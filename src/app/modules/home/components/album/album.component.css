@@ -1,0 +1,11 @@
+.album {
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+.album-subtitle {
+  text-align: center;
+}

@@ -1,0 +1,42 @@
+.album-dialog-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+}
+
+.current-photo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.album-dialog img {
+  max-width: 100%;
+}
+
+.album-dialog p {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+.album-dialog p.pointer {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.thumbs img {
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.thumbs img.current {
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  cursor: default;
+}

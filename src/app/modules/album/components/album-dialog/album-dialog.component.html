@@ -1,0 +1,29 @@
+<div class="album-dialog-wrapper">
+  <div class="album-dialog">
+    <div class="current-photo">
+      <p
+        (click)="data.showPreviousButton && previous.emit()"
+        [className]="data.showPreviousButton && 'pointer'"
+      >
+        <
+      </p>
+      <img [src]="data.current.url" />
+      <p
+        (click)="data.showNextButton && next.emit()"
+        [className]="data.showNextButton && 'pointer'"
+      >
+        >
+      </p>
+    </div>
+    <div class="thumbs">
+      <img
+        *ngFor="let thumbnail of data.thumbnails"
+        [src]="thumbnail.thumbnailUrl"
+        [className]="thumbnail.id === data.current.id && 'current'"
+        (click)="
+          thumbnail.id !== data.current.id && selected.emit(thumbnail.id)
+        "
+      />
+    </div>
+  </div>
+</div>

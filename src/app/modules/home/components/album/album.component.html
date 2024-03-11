@@ -1,0 +1,6 @@
+<mat-card class="album" (click)="navigate.emit()">
+  <img mat-card-image [src]="thumbnail" />
+  <mat-card-subtitle class="album-subtitle"
+    >Album {{ album.id }} - {{ album.title }}</mat-card-subtitle
+  >
+</mat-card>

@@ -1,0 +1,13 @@
+<section class="album" *ngIf="album">
+  <div class="header">
+    <a routerLink="/">Home</a>
+    <h2>Album {{ album.id }} - {{ album.title }}</h2>
+  </div>
+  <div class="items">
+    <img
+      *ngFor="let photo of album.photos; let i = index"
+      [src]="photo.thumbnailUrl"
+      (click)="openDialog(i)"
+    />
+  </div>
+</section>

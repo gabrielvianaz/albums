@@ -1,0 +1,8 @@
+<div class="albums" *ngIf="photos.length">
+  <app-album
+    *ngFor="let album of albums"
+    [album]="album"
+    [thumbnail]="getThumbnail(album.id)"
+    (navigate)="navigate(album.id)"
+  ></app-album>
+</div>

@@ -1,0 +1,30 @@
+<section class="auth">
+  <h1>Seja bem-vindo!</h1>
+  <form (submit)="onSubmit()" class="auth-form" #authForm="ngForm">
+    <mat-form-field>
+      <mat-label>Usuário</mat-label>
+      <input
+        [(ngModel)]="authRequest.username"
+        [ngModelOptions]="{ standalone: true }"
+        matInput
+        required
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Senha</mat-label>
+      <input
+        [(ngModel)]="authRequest.password"
+        [ngModelOptions]="{ standalone: true }"
+        type="password"
+        matInput
+        required
+      />
+    </mat-form-field>
+    <p class="erro" *ngIf="showError">
+      Ocorreu um erro durante a autenticação. Tente novamente!
+    </p>
+    <button [disabled]="isButtonDisabled()" type="submit" mat-raised-button>
+      Entrar
+    </button>
+  </form>
+</section>
