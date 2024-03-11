@@ -20,6 +20,10 @@ img {
   cursor: pointer;
 }
 
+img:hover {
+  filter: opacity(0.8);
+}
+
 a {
   text-decoration: none;
   font-weight: bold;
