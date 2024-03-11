@@ -34,7 +34,7 @@ export class AlbumComponent {
     return await firstValueFrom(
       forkJoin([this.getAlbum(id), this.getPhotos(id)]).pipe(
         mergeMap((res) => {
-          return of({ ...res[0], photos: res[1] });
+          return of({ ...res[0], photos: res[1].splice(0, 10) });
         })
       )
     );

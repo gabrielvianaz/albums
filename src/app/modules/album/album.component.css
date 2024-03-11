@@ -16,6 +16,13 @@
   text-align: center;
 }
 
+.items {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 img {
   cursor: pointer;
 }
@@ -31,5 +38,5 @@ a {
 }
 
 a:hover {
-  color: gray;
+  filter: opacity(0.8);
 }
